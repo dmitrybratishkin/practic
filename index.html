@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение документов Word</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .documents {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; /* Позволяет контейнеру перетаскивать элементы на новые строки */
+        }
+
+        .doc {
+            width: 48%;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Адаптивные стили для мобильных устройств */
+        @media (max-width: 768px) {
+            .documents {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .doc {
+                width: 90%; /* Задаем 90% ширины для мобильных устройств */
+                height: 400px; /* Уменьшаем высоту на мобильных устройствах */
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Для еще более маленьких экранов, как iPhone 14 */
+        @media (max-width: 375px) {
+            .doc {
+                width: 95%;
+                height: 400px; /* Высота будет стабильной на мобильных устройствах */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Сравнение документов Word</h1>
+
+    <div class="documents">
+        <div class="doc">
+            <h2>Документ 1</h2>
+            <iframe src="https://docs.google.com/document/d/1ye6DYWktCYyc8nlss-M4446tms2_fxQi/edit?usp=sharing&ouid=117943082029187201183&rtpof=true&sd=true" frameborder="0"></iframe>
+        </div>
+
+        <div class="doc">
+            <h2>Документ 2</h2>
+            <iframe src="https://docs.google.com/document/d/17sRlDQ-QA844jNsYIqAXgowo5C0bcUOv/edit?usp=sharing&ouid=117943082029187201183&rtpof=true&sd=true" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
